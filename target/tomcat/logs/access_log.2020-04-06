@@ -39,3 +39,4 @@
 127.0.0.1 - - [06/Apr/2020:12:09:19 +0500] "DELETE /pizza HTTP/1.1" 405 1051 http-bio-8080-exec-4 22
 127.0.0.1 - - [06/Apr/2020:12:09:37 +0500] "DELETE /pizza/Ham HTTP/1.1" 200 - http-bio-8080-exec-6 47
 127.0.0.1 - - [06/Apr/2020:12:09:47 +0500] "GET /pizzas HTTP/1.1" 200 232 http-bio-8080-exec-8 48
+127.0.0.1 - - [06/Apr/2020:12:25:50 +0500] "GET /pizzas HTTP/1.1" 200 232 http-bio-8080-exec-1 70
