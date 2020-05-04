@@ -1,3 +1,9 @@
+com/mp/PizzaServiceImpl.class
 com/mp/PizzaRepository.class
+com/mp/ApplicationContextConfig.class
 com/mp/SpringWebAppInitializer.class
+com/mp/PizzaService.class
+com/mp/PizzaController.class
 com/mp/Pizza.class
+com/mp/Pizza$1.class
+com/mp/JpaConfig.class

@@ -1,16 +1,19 @@
 package com.mp;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
+import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.bind.annotation.*;
 
+import javax.ws.rs.core.MediaType;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequestMapping()
 public class PizzaController {
 
     @Autowired
-    private PizzaRepository pizzaRepo;
+    private PizzaServiceImpl pizzaService;
 
     @RequestMapping("/")
     @ResponseBody
@@ -18,36 +21,34 @@ public class PizzaController {
         return "Welcome to KerellPizza";
     }
 
-    @RequestMapping(value = "/pizzas",
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
-    public List<Pizza> getPizzas() {
-        return pizzaRepo.getAllPizzas();
+    @RequestMapping(value = "/pizzas", method = RequestMethod.GET)
+    public @ResponseBody List<Pizza> getPizzas() {
+        List<Pizza> pizzas = pizzaService.findAll();
+        System.out.println(pizzas);
+        return pizzas;
     }
 
-    @RequestMapping(value = "/pizza",
-            method = RequestMethod.POST,
-            produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/pizza",
+            consumes = MediaType.APPLICATION_JSON,
+            produces = MediaType.APPLICATION_JSON)
     @ResponseBody
     public Pizza addPizza(@RequestBody Pizza pizza){
-        return pizzaRepo.addPizza(pizza);
+        return pizzaService.save(pizza);
     }
 
 
-    @RequestMapping(value = "/pizza",
-            method = RequestMethod.PUT,
-            produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/pizza",
+            consumes = MediaType.APPLICATION_JSON,
+            produces = MediaType.APPLICATION_JSON)
     @ResponseBody
-    public Pizza updatePizza(@RequestBody Pizza pizza){
-        return pizzaRepo.updatePizza(pizza);
+    public Pizza updatePizza(@RequestBody Pizza newPizza){
+        return pizzaService.save(newPizza);
     }
 
-    @RequestMapping(value = "/pizza/{pizName}",
-            method = RequestMethod.DELETE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
+    @DeleteMapping(value = "/pizza/{pizId}")
     @ResponseBody
-    public void deletePizza(@PathVariable("pizName") String pizzaName){
-        pizzaRepo.deletePizza(pizzaName);
+    public void deletePizza(@PathVariable("pizId") Long id){
+        pizzaService.deleteById(id);
     }
+
 }
