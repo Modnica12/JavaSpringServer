@@ -1,11 +1,9 @@
 package com.mp;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.core.MediaType;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
