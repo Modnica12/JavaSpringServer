@@ -1,7 +1,11 @@
 com/mp/PizzaRepository.class
+com/mp/auth/AuthService.class
+com/mp/auth/User.class
 com/mp/PizzaService.class
+com/mp/auth/AuthController.class
 com/mp/Pizza.class
 com/mp/Pizza$1.class
+com/mp/auth/AuthRepository.class
 com/mp/JpaConfig.class
 com/mp/order/OrderServiceImpl.class
 com/mp/PizzaServiceImpl.class
@@ -12,5 +16,6 @@ com/mp/ApplicationContextConfig.class
 com/mp/SpringWebAppInitializer.class
 com/mp/cart/Cart.class
 com/mp/order/OrderRepository.class
+com/mp/auth/AuthServiceImpl.class
 com/mp/PizzaController.class
 com/mp/order/OrderService.class

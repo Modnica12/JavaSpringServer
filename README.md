@@ -29,9 +29,21 @@ Run Server **in terminal**: mvn tomcat7:run
  
 ### Commands for Order:
 
--GET Request: http://localhost:8080/order/all -> Shows list of orders.
+#### !!!!!Works only if you authorized!!!!!
 
--GET Request: http://localhost:8080/order/make -> Takes pizzas from cart and creates order.
+-GET Request: http://localhost:8080/order/make -> Takes pizzas from cart and creates order. 
+
+-GET Request: http://localhost:8080/order/my -> Shows orders of current user. 
 
 -DELETE Request: **in terminal**
     curl -v -X DELETE http://localhost:8080/order/delete/1 -> Deletes order with id=1.
+    
+#### Works without authorization.
+
+-GET Request: http://localhost:8080/order/all -> Shows list of orders.
+    
+### Commands for Auth:
+
+-GET Request: http://localhost:8080/register?username=kerell&password=1234 -> registers user kerell with password 1234.
+
+-GET Request: http://localhost:8080/auth?username=kerell&password=1234 -> Login.

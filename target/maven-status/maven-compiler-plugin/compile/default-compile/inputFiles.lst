@@ -6,10 +6,15 @@
 /home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/order/OrderService.java
 /home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/cart/Cart.java
 /home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/Pizza.java
+/home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/auth/AuthService.java
 /home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/PizzaServiceImpl.java
 /home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/PizzaService.java
 /home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/cart/CartController.java
 /home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/JpaConfig.java
 /home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/ApplicationContextConfig.java
+/home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/auth/User.java
+/home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/auth/AuthServiceImpl.java
+/home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/auth/AuthController.java
 /home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/order/OrderController.java
+/home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/auth/AuthRepository.java
 /home/kerell/outDrive/GIT/JavaSpringServer/src/main/java/com/mp/order/Order.java

@@ -1,0 +1,17 @@
+127.0.0.1 - - [03/Jun/2020:14:40:38 +0500] "GET /auth?username=kerell&password=1234 HTTP/1.1" 200 18 http-bio-8080-exec-1 169
+127.0.0.1 - - [03/Jun/2020:14:42:01 +0500] "PUT /auth?username=kerell HTTP/1.1" 400 1070 http-bio-8080-exec-1 98
+127.0.0.1 - - [03/Jun/2020:14:42:41 +0500] "PUT /auth?username=kerell HTTP/1.1" 400 1070 http-bio-8080-exec-2 6
+127.0.0.1 - - [03/Jun/2020:14:44:08 +0500] "PUT /auth?username=kerell HTTP/1.1" 400 1070 http-bio-8080-exec-1 63
+127.0.0.1 - - [03/Jun/2020:14:45:03 +0500] "GET /auth?username=kerell&password=1234 HTTP/1.1" 200 18 http-bio-8080-exec-1 135
+127.0.0.1 - - [03/Jun/2020:14:47:39 +0500] "GET /register?username=kerell&password=1234 HTTP/1.1" 200 32 http-bio-8080-exec-3 39
+127.0.0.1 - - [03/Jun/2020:14:55:09 +0500] "GET /order/all HTTP/1.1" 200 54 http-bio-8080-exec-1 256
+127.0.0.1 - - [03/Jun/2020:14:55:34 +0500] "DELETE /order/delete/1 HTTP/1.1" 200 - http-bio-8080-exec-3 44
+127.0.0.1 - - [03/Jun/2020:14:55:39 +0500] "GET /order/all HTTP/1.1" 200 54 http-bio-8080-exec-2 27
+127.0.0.1 - - [03/Jun/2020:14:56:07 +0500] "GET /auth?username=kerell&password=1234 HTTP/1.1" 200 18 http-bio-8080-exec-5 63
+127.0.0.1 - - [03/Jun/2020:14:56:10 +0500] "DELETE /order/delete/1 HTTP/1.1" 200 - http-bio-8080-exec-7 89
+127.0.0.1 - - [03/Jun/2020:14:56:15 +0500] "GET /order/all HTTP/1.1" 200 12 http-bio-8080-exec-6 13
+127.0.0.1 - - [03/Jun/2020:14:56:22 +0500] "PUT /cart/add/1 HTTP/1.1" 200 - http-bio-8080-exec-10 22
+127.0.0.1 - - [03/Jun/2020:14:56:25 +0500] "PUT /cart/add/2 HTTP/1.1" 200 - http-bio-8080-exec-3 14
+127.0.0.1 - - [03/Jun/2020:14:56:28 +0500] "GET /order/make HTTP/1.1" 200 25 http-bio-8080-exec-9 47
+127.0.0.1 - - [03/Jun/2020:14:56:32 +0500] "GET /order/all HTTP/1.1" 200 54 http-bio-8080-exec-9 19
+127.0.0.1 - - [03/Jun/2020:14:56:35 +0500] "GET /order/my HTTP/1.1" 200 54 http-bio-8080-exec-9 107

@@ -11,6 +11,8 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String userName;
+
     public Order(){
     }
 
@@ -32,8 +34,16 @@ public class Order {
         this.pizzaIds = pizzaIds;
     }
 
+    public void setUser(String user) {
+        this.userName = user;
+    }
+
+    public String getUser() {
+        return userName;
+    }
+
     @Override
     public String toString() {
-        return "Order [id=" + id + ", pizzaIds=" + pizzaIds + "]";
+        return "Order [id=" + id + ", userName=" + userName + ", pizzaIds=" + pizzaIds + "]";
     }
 }

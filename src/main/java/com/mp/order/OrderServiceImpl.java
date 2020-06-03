@@ -2,6 +2,8 @@ package com.mp.order;
 
 import com.mp.Pizza;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -34,5 +36,10 @@ public class OrderServiceImpl implements OrderService{
     @Override
     public void deleteById(Long id) {
         orderRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Order> getAllWithUsername(String username) {
+        return orderRepository.getAllWithUsername(username);
     }
 }
