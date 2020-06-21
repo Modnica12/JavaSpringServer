@@ -1,0 +1,8 @@
+com/mp/auth/AuthService.class
+com/mp/ApplicationContextConfig.class
+com/mp/SpringWebAppInitializer.class
+com/mp/auth/User.class
+com/mp/auth/AuthServiceImpl.class
+com/mp/auth/AuthController.class
+com/mp/auth/AuthRepository.class
+com/mp/JpaConfig.class

@@ -31,19 +31,22 @@ Run Server **in terminal**: mvn tomcat7:run
 
 #### !!!!!Works only if you authorized!!!!!
 
--GET Request: http://localhost:8080/order/make -> Takes pizzas from cart and creates order. 
+-Put Request: **in terminal**
+    curl -v -X PUT http://localhost:8080/order/make?token=[ *your token* ] -> Takes pizzas from cart and creates order. 
 
--GET Request: http://localhost:8080/order/my -> Shows orders of current user. 
+-GET Request: http://localhost:8080/order/my?token=[ *your token* ] -> Shows orders of current user. 
 
 -DELETE Request: **in terminal**
-    curl -v -X DELETE http://localhost:8080/order/delete/1 -> Deletes order with id=1.
+    curl -v -X DELETE http://localhost:8080/order/delete/1?token=[ *your token* ] -> Deletes order with id=1.
     
-#### Works without authorization.
-
--GET Request: http://localhost:8080/order/all -> Shows list of orders.
+-GET Request: http://localhost:8080/order/all?token=[ *your token* ] -> Shows list of orders.
     
 ### Commands for Auth:
 
--GET Request: http://localhost:8080/register?username=kerell&password=1234 -> registers user kerell with password 1234.
+-GET Request: http://localhost:8080/register -> redirected to auth page
 
--GET Request: http://localhost:8080/auth?username=kerell&password=1234 -> Login.
+-GET Request: http://localhost:8080/auth -> redirected to auth page
+
+-GET Request: http://localhost:8081/register?username=kerell&password=1234 -> registers user kerell with password 1234.
+
+-GET Request: http://localhost:8081/auth?username=kerell&password=1234 -> Login. You will be redirected to page with token.

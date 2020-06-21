@@ -2,9 +2,11 @@ package com.mp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.ws.rs.core.MediaType;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping()
@@ -15,8 +17,8 @@ public class PizzaController {
 
     @RequestMapping("/")
     @ResponseBody
-    public String welcome() {
-        return "Welcome to KerellPizza";
+    public String welcome(@RequestParam("token") Optional<String> token) {
+        return token.orElse("Welcome to KerellPizza");
     }
 
     @RequestMapping(value = "/pizzas", method = RequestMethod.GET)
@@ -24,6 +26,17 @@ public class PizzaController {
         List<Pizza> pizzas = pizzaService.findAll();
         System.out.println(pizzas);
         return pizzas;
+    }
+
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public ModelAndView redirectReg() {
+        return new ModelAndView("redirect:" + "http://localhost:8081/");
+    }
+
+    @RequestMapping("/auth")
+    @ResponseBody
+    public ModelAndView redirectAuth() {
+        return new ModelAndView("redirect:" + "http://localhost:8081/");
     }
 
     @PostMapping(value = "/pizza",
