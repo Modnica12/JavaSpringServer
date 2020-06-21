@@ -4,6 +4,8 @@
 
 Run Server **in terminal**: mvn tomcat7:run
 
+Run Auth App from the folder AuthApplication **in terminal**: mvn tomcat7:run
+
 ### Commands for list of pizzas:
 
 -GET Request: http://localhost:8080/pizzas
